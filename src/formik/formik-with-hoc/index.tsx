@@ -61,7 +61,10 @@ const FormikExample: FC<FormikExampleProps> = ({ items, onSubmit }) => {
       validateOnBlur={false}
     >
       {({ handleSubmit, values }) => {
-        console.log("formik-with-hoc rendered");
+        console.log(
+          "%c formik-with-hoc rendered",
+          "color: red; font-weight: bold"
+        );
         return (
           <form onSubmit={handleSubmit}>
             <label>Display Objectives</label>

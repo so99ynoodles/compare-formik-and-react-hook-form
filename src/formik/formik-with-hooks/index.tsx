@@ -52,7 +52,10 @@ const FormikExample: FC<FormikExampleProps> = ({ items, onSubmit }) => {
     validationSchema,
   });
 
-  console.log("formik-with-hooks rendered");
+  console.log(
+    "%c formik-with-hooks rendered",
+    "color: green; font-weight: bold"
+  );
 
   return (
     <form onSubmit={handleSubmit} onReset={handleReset}>

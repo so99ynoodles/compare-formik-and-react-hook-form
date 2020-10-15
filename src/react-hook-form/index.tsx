@@ -45,7 +45,12 @@ const ItemField: FC<{
     <>
       <div>
         <label>Item Name</label>
-        <input ref={control.register()} name={`items[${index}].title`} />
+        <input
+          ref={control.register({
+            required: true,
+          })}
+          name={`items[${index}].title`}
+        />
       </div>
       <div>
         <label>Item Type</label>
@@ -169,7 +174,7 @@ const ReactHookFormExample: FC<ReactHookFormExampleProps> = ({
     name: "items",
   });
 
-  console.log("react-hook-form rendered");
+  console.log("%c react-hook-form rendered", "color: blue; font-weight: bold");
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
